@@ -55,68 +55,66 @@ const Popular = () => {
   };
 
   return (
-    <div className="mt-16 overflow-hidden text-center relative ">
+    <div className="mt-16 overflow-hidden text-center relative">
       <Heading
-        title="top Populars"
-        description="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY"
+        title="Top Populars"
+        description="Lorem ipsum is simply dummy text of the printing and typesetting industry."
       />
-      <div className="columns-2 h-full bg-gray-100">
-        <div className="columns-1">
-          <div className="p-6">
-            <Slider {...settings}>
-              {products.slice(7, 10).map((item, index) => (
-                <div key={index} className="mx-auto max-w-xs relative h-full">
-                  <div className="p-1 hover:bg-gray-200 hover:shadow transition-all duration-300 relative group h-full">
-                    <img
-                      src={item.img}
-                      title={item.category}
-                      alt={item.category}
-                      className="mx-auto h-full w-full object-cover"
-                    />
-                    <div className="icons absolute top-0 right-0 transform translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
-                      <div className="flex flex-wrap flex-col  p-2 mr-1 mt-1">
-                        <FontAwesomeIcon
-                          className="p-2 mb-1 bg-white hover:bg-red-500 hover:text-white"
-                          title="add to cart"
-                          icon="heart"
-                        />
-                        <FontAwesomeIcon
-                          className="p-2 mb-1 bg-white hover:bg-red-500 hover:text-white"
-                          title="add to cart"
-                          icon="balance-scale"
-                        />
-                        <FontAwesomeIcon
-                          className="p-2 mb-1 bg-white hover:bg-red-500 hover:text-white"
-                          title="add to cart"
-                          icon="eye"
-                        />
-                      </div>
+      <div className="lg:grid lg:grid-cols-2 lg:gap-6 md:grid md:grid-cols-2 sm:grid sm:grid-cols-1 h-full bg-gray-100">
+        <div className="lg:col-span-1 md:col-span-2 p-6">
+          <Slider {...settings}>
+            {products.slice(7, 10).map((item, index) => (
+              <div key={index} className="mx-auto max-w-xs relative h-full">
+                <div className="p-1 hover:bg-gray-200 hover:shadow transition-all duration-300 relative group h-full">
+                  <img
+                    src={item.img}
+                    title={item.category}
+                    alt={item.category}
+                    className="mx-auto h-full w-full object-cover"
+                  />
+                  <div className="icons absolute top-0 right-0 transform translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
+                    <div className="flex flex-wrap flex-col p-2 mr-1 mt-1">
+                      <FontAwesomeIcon
+                        className="p-2 mb-1 bg-white hover:bg-red-500 hover:text-white"
+                        title="add to cart"
+                        icon="heart"
+                      />
+                      <FontAwesomeIcon
+                        className="p-2 mb-1 bg-white hover:bg-red-500 hover:text-white"
+                        title="add to cart"
+                        icon="balance-scale"
+                      />
+                      <FontAwesomeIcon
+                        className="p-2 mb-1 bg-white hover:bg-red-500 hover:text-white"
+                        title="add to cart"
+                        icon="eye"
+                      />
                     </div>
                   </div>
-                  <div className="mt-4">
-                    <div className="font-semibold uppercase">{item.name}</div>
-                    <div>${item.price}</div>
-                  </div>
-                  <div className="mt-5">
-                    <button
-                      type="button"
-                      className="bg-black text-white p-4 hover:bg-red-600 uppercase font-bold"
-                    >
-                      Add To Cart
-                    </button>
-                  </div>
                 </div>
-              ))}
-            </Slider>
-          </div>
+                <div className="mt-4">
+                  <div className="font-semibold uppercase">{item.name}</div>
+                  <div>${item.price}</div>
+                </div>
+                <div className="mt-5">
+                  <button
+                    type="button"
+                    className="bg-black text-white p-4 hover:bg-red-600 uppercase font-bold"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
-        <div className="columns-1 h-full">
+        <div className="lg:col-span-1 md:col-span-2">
           <div className="h-full">
             <img
               src="./img/banners/id1-img1.jpg"
               title="title"
               alt="banners"
-              className="bg-cover hover:shadow-slate-800"
+              className="bg-cover hover:shadow-slate-800 w-full h-full"
             />
           </div>
         </div>
