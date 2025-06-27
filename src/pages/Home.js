@@ -11,7 +11,7 @@ import ContactUs from "../components/ContactUs";
 export default function Home() {
   return (
     <>
-      <div className="bg-white">
+      <div className="bg-white overflow-x-hidden">
         <Sliders />
         <Category />
         <Arrival />
